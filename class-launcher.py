@@ -6,8 +6,10 @@ clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
     start = input("\n-x | -h | Open: ")
-
-
+    time.sleep(5)
+    os.system('cls' if os.name=='nt' else 'clear')
+    start = input("\n-x | -h | Open: ")
+    
     if start == "h":
         os.system('cls' if os.name=='nt' else 'clear')
         print(clases)
