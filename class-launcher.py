@@ -6,9 +6,6 @@ clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
     start = input("\n-x | -h | Open: ")
-    if error == True:
-        time.sleep(5)
-        error = False
 
 
     if start == "h":
@@ -59,10 +56,8 @@ while True:
         os.system('cls' if os.name=='nt' else 'clear')
      
     else:
-        error = True
-        while error:
-            time.sleep(1)
-            os.system('cls' if os.name=='nt' else 'clear')
-            print("No hay resultados para tu búsqueda. Pruébalo con el menú de -h for Help\n")
+        os.system('cls' if os.name=='nt' else 'clear')
+        time.sleep(0.5)
+        print("No hay resultados para tu búsqueda. Pruébalo con el menú de -h for Help\n")
             
         
