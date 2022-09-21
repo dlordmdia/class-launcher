@@ -6,6 +6,10 @@ clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
     start = input("\n-x | -h | Open: ")
+    if error == True:
+        time.sleep(5)
+        error = False
+
 
     if start == "h":
         os.system('cls' if os.name=='nt' else 'clear')
@@ -32,19 +36,33 @@ while True:
     
     elif start == "tic":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ2MjkyMDE4MDI5")
+        os.system('cls' if os.name=='nt' else 'clear')
 
     elif start == "tec":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ2OTY2NTc4OTAx")
+        os.system('cls' if os.name=='nt' else 'clear')
 
     elif start == "eco":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ3MjUzNjgxNzIw")
+        os.system('cls' if os.name=='nt' else 'clear')
 
     elif start == "ef":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ3MjE2MzkzOTA2")
+        os.system('cls' if os.name=='nt' else 'clear')
 
     elif start == "gh":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ3MDA3OTU4OTkx")
+        os.system('cls' if os.name=='nt' else 'clear')
 
     elif start == "tut":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ1NjczNjg1MDMz")
+        os.system('cls' if os.name=='nt' else 'clear')
      
+    else:
+        error = True
+        while error:
+            time.sleep(1)
+            os.system('cls' if os.name=='nt' else 'clear')
+            print("No hay resultados para tu búsqueda. Pruébalo con el menú de -h for Help\n")
+            
+        
