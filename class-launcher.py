@@ -2,14 +2,10 @@ import time
 import os
 import webbrowser
 os.system('cls' if os.name=='nt' else 'clear')
-clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria\n-val Valors")
+clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria\n-val Valors\n\n-cal Horario de Clases\n")
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
-    start = input("\n-x | -h | Open: ")
-    time.sleep(5)
-    os.system('cls' if os.name=='nt' else 'clear')
-    start = input("\n-x | -h | Open: ")
-    
+    start = input("\n-x | -h | Abrir: ")
 
     if start == "h":
         os.system('cls' if os.name=='nt' else 'clear')
@@ -61,6 +57,25 @@ while True:
     elif start == "val":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ1ODM0Njg1NzE0")
         os.system('cls' if os.name=='nt' else 'clear')
+    
+    elif start == "cal":
+        os.system('cls' if os.name=='nt' else 'clear')
+        print('''
+                 ________________________________
+                /                                \.
+                |eco  |tec  |cast/cat |eco  |eng |
+                |-----|-----|---------|-----|----|
+                |tic  |eco  |eng      |tec  |val |
+                |-----|-----|---------|-----|----|
+                |cast |ef   |gh       |ef   |cast|
+                |/////|/////|/////////|/////|////|
+                |cat  |eng  |tec      |cat  |mat |
+                |-----|-----|---------|-----|----|
+                |mat  |tic  |mat      |tic  |cat |
+                |-----|-----|---------|-----|----|
+                |gh   |cast |tut      |mat  |gh  |
+                \________________________________/
+                ''')
      
     else:
         os.system('cls' if os.name=='nt' else 'clear')
