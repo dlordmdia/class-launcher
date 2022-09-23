@@ -10,6 +10,7 @@ while True:
     os.system('cls' if os.name=='nt' else 'clear')
     start = input("\n-x | -h | Open: ")
     
+
     if start == "h":
         os.system('cls' if os.name=='nt' else 'clear')
         print(clases)
