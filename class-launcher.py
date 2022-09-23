@@ -2,7 +2,7 @@ import time
 import os
 import webbrowser
 os.system('cls' if os.name=='nt' else 'clear')
-clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria\n-val Valors\n\n-cal Horario de Clases\n")
+clases = ("\nSi estás en Un Online Compiler (Terminal de Python en una WEB) utiliza mejor el script class-launcher.online.py de mi GitHub \n\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria\n-val Valors\n\n-cal Horario de Clases\n")
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
     start = input("\n-x | -h | Abrir: ")
