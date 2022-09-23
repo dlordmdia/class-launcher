@@ -2,7 +2,7 @@ import time
 import os
 import webbrowser
 os.system('cls' if os.name=='nt' else 'clear')
-clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria")
+clases = ("\n-cat Catalá\n-cast Castellano\n-eng English\n-mat Mates\n-tic TIC\n-tec Tecnologia\n-eco IAEE\n-ef Educació Física\n-gh Geografía i Historia\n-tut Tutoria\n-val Valors")
 os.system('cls' if os.name=='nt' else 'clear')
 while True:
     start = input("\n-x | -h | Open: ")
@@ -55,6 +55,10 @@ while True:
 
     elif start == "tut":
         webbrowser.open("https://classroom.google.com/u/1/c/NTQ1NjczNjg1MDMz")
+        os.system('cls' if os.name=='nt' else 'clear')
+    
+    elif start == "val":
+        webbrowser.open("https://classroom.google.com/u/1/c/NTQ1ODM0Njg1NzE0")
         os.system('cls' if os.name=='nt' else 'clear')
      
     else:
