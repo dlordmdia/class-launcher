@@ -46,7 +46,6 @@ current_theme = "Light"
 
 frame_style = ttk.Style()
 frame_style.configure("My.TFrame", background="white")
-frame = ttk.Frame(window, height=1000, style="My.TFrame")  # Grid Layout
 
 button_style = ttk.Style()
 button_style.configure('my.TButton', font=('Segoe UI', 12))
@@ -69,6 +68,19 @@ class_list = [
     {"name": "Valors", "id": "NTQ1ODM0Njg1NzE0"},
 
 ]
+
+
+def show_timetable():
+    timetable.pack(fill='both', expand=1)
+    launch.pack_forget()
+    window.resizable(False, False)
+    window.geometry("462x480")
+
+
+def return_to_launch():
+    launch.pack(fill='both', expand=1)
+    timetable.pack_forget()
+    window.resizable(True, True)
 
 
 def switch_theme():
@@ -120,25 +132,18 @@ def open_classroom(class_id):
         f"https://classroom.google.com/u/{current_user.get()}/c/{class_id}")
 
 
-def show_timetable():
-    tt_window = Toplevel(window)
-    tt_window.title("Horario")
-    tt_window.configure(bg="white")
-    tt_window.geometry("462x433")
-    tt_window.resizable(False, False)
-    tt_image = ImageTk.PhotoImage(Image.open("clases.png"))
-    label1 = tk.Label(tt_window, image=tt_image)
-    label1.image = tt_image
-
-    # Position image
-    label1.pack()
-
-
 def userid_changed():
     writeconfig = open("config.txt", "w")
     writeconfig.write(f"{current_user.get()},{current_theme}")
     writeconfig.close()
 
+
+launch = ttk.Frame(window, style="My.TFrame")
+timetable = ttk.Frame(window, style="My.TFrame")
+
+# ----- MAIN LAUNCH WINDOW -----
+
+frame = ttk.Frame(launch, height=1000, style="My.TFrame")  # Grid Layout
 
 # Configure Grid Layout
 for i in range(int((round(len(class_list))/4)+1)):
@@ -166,7 +171,7 @@ for lesson in class_list:
 # Render Properties of Grid
 frame.pack(pady=10, padx=10, fill="both", expand=True, side="top")
 
-bottom_row = ttk.Frame(window, style="My.TFrame")
+bottom_row = ttk.Frame(launch, style="My.TFrame")
 
 bottom_row.rowconfigure(0, weight=1)
 
@@ -205,5 +210,15 @@ else:
 
 bottom_row.pack(pady=10, padx=10, side="left")
 
+# ----- TIMETABLE WINDOW -----
+
+tt_image = ImageTk.PhotoImage(Image.open("clases.png"))
+tt_label = tk.Label(timetable, image=tt_image)
+tt_label.image = tt_image
+tt_label.pack(pady=5)
+
+ttk.Button(timetable, text="Volver", command=return_to_launch).pack(pady=5)
+
+return_to_launch()
 
 window.mainloop()  # Run Program, Render UI & Loop to listen changes
