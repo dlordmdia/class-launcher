@@ -100,9 +100,9 @@ def switch_theme():
         except:
             pass
 
-        writeconfig = open("config.txt", "w")
-        writeconfig.write(f"{current_user.get()},{current_theme}")
-        writeconfig.close()
+    writeconfig = open("config.txt", "w")
+    writeconfig.write(f"{current_user.get()},{current_theme}")
+    writeconfig.close()
 
 
 def apply_theme(target_theme):
