@@ -62,7 +62,7 @@ label_style.configure("My.TLabel", background="white")
 class_list = [
     {"name": "Català", "id": "NTQ2NzkyMzY3NDcy"},
     {"name": "Castellano", "id": "NTQ2OTAwOTYzNDkx"},
-    {"name": "English", "id": "NTI3MTU2NzY4Mjg4"},  # LINK DEFINED?
+    {"name": "English", "id": "NTI3MTU2NzY4Mjg4"},  # LINK DEFINED
     {"name": "Mates", "id": "NTQ1ODQ1NjA3MTA3"},
     {"name": "TIC", "id": "NTQ2MjkyMDE4MDI5"},
     {"name": "Tecnologia", "id": "NTQ2OTY2NTc4OTAx"},
