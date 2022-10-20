@@ -185,6 +185,7 @@ class LauncherApp(ctk.CTk):
     def show_timetable(self):
         tt_window = ctk.CTkToplevel(self)
         tt_window.geometry("400x430")
+        tt_window.title("Horario")
 
         def close_window():
             tt_window.destroy()
