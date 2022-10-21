@@ -1,5 +1,5 @@
 # class-launcher
 
-RECOMMENDED CODE: class-launcher-tk.py
+RECOMMENDED CODE: laucher-oop.py
 
 WHY? It's with a tkinter interface
