@@ -7,7 +7,7 @@ OOP Version - Advanced
 '''
 
 # MODULE IMPORTS!
-import tkinter as tk  # Base tkinter module
+import tkinter as tk  #Base tkinter module
 import tkinter.ttk as ttk  # Fancy Tkinter Widgets
 import webbrowser  # Open links
 import os
